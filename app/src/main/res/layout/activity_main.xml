@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/et_lat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:hint="Enter Latitude" />
+
+    <EditText
+        android:id="@+id/et_lng"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_below="@id/et_lat"
+        android:hint="Enter Longitude" />
+
+    <Button
+        android:id="@+id/btn_show"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Map"
+        android:layout_below="@id/et_lng" />
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_show"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+
+
+</RelativeLayout>

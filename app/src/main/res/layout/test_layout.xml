@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="4"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:layout_weight="1">
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width ="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src ="@drawable/image1"/>
+
+       <TextView
+           android:id="@+id/line"
+           android:layout_width="wrap_content"
+           android:layout_height="fill_parent"
+           android:layout_toRightOf="@+id/image"
+           android:gravity="center"
+           android:text="|"
+           style="?android:attr/textAppearanceLarge"
+           android:textColor="@color/common_signin_btn_dark_text_default"/>
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/line"
+            android:gravity="center"
+            android:text="CountryName"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"
+            style="?android:attr/textAppearanceLarge"
+            android:textColor="@color/common_signin_btn_dark_text_default"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:text="Date and Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/country"
+            android:layout_alignStart="@+id/country"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/common_action_bar_splitter"
+        android:gravity="center"
+        android:layout_weight="1.5">
+
+        <TextView
+            android:id="@+id/temp"
+            style="@style/tempStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="top"
+            android:textSize="150sp"
+            android:text="75"/>
+
+        <TextView
+            android:id="@+id/unittemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/textAppearanceLarge"
+            android:layout_toRightOf="@id/temp"
+            android:layout_marginTop="30dp"
+            android:textSize="40sp"
+            android:text="@string/degree"/>
+
+        <TextView
+            android:id="@+id/celcius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/textAppearanceLarge"
+            android:layout_toRightOf="@id/unittemp"
+            android:layout_marginTop="35dp"
+            android:text="C"/>
+
+    </RelativeLayout>
+
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_weight="1.5"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp">
+
+    </ListView>
+</LinearLayout>
